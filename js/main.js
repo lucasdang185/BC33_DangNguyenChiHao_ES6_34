@@ -3,7 +3,7 @@ const addItem = document.querySelector("#addItem");
 const myListTask = new ListTask()
 
 
-const getFormValues = () => {
+const getValues = () => {
     const input = document.querySelector('#newTask').value
     const task = new Task()
     task['name'] = input
@@ -48,9 +48,9 @@ const renderTaskCompleted = () => {
 };
 
 addItem.onclick = () => {
-    const task = getFormValues()
+    const task = getValues()
     myListTask.addTask(task)
-    getFormValues()
+    getValues()
     renderTaskList()
 }
 
